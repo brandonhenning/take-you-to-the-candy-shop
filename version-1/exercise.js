@@ -5,16 +5,15 @@ module.exports = {
     allSalesToArray
 };
 
+
 function candySalesToObject (array) {
-    return array.reduce((object, sale) => {
+    return array.reduce(object => {
         object.item = array[0]
         object.price = array[1]
         object.quantity = array[2]
         return object
     }, {})
 }
-
-
 
 function salesDayToObject (date, dataArr) {
     let sales = dataArr[date]
