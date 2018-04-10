@@ -5,13 +5,13 @@ module.exports = {
     allSalesToArray
 };
 
-
 function candySalesToObject (array) {
-    return {
-            item: array[0],
-            price: array[1],
-            quantity: array[2]
-    }
+    return array.reduce((object, sale) => {
+        object.item = array[0]
+        object.price = array[1]
+        object.quantity = array[2]
+        return object
+    }, {})
 }
 
 
